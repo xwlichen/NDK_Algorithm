@@ -6,6 +6,7 @@
 #include "035_sort.hpp"
 #include "test_array_utils.cpp"
 #include "036_sort.hpp"
+#include "037_sort.hpp"
 
 
 //using namespace ArrayUtils;
@@ -75,13 +76,15 @@ Java_com_smart_ndk_algorithm_Algorlthm_test035(JNIEnv *env, jclass type) {
 
 //    int *arr1 = ArrayUtils::create_random_array(len, 20, 100);
     int *arr1 = ArrayUtils::create_nearly_order_array(len, 20);
-//    printArr(arr1, len);
+    printArr(arr1, len);
     LOGE("%s", "------------------------------")
     int *arr2 = ArrayUtils::copy_arry(arr1, len);
     int *arr3 = ArrayUtils::copy_arry(arr1, len);
     int *arr4 = ArrayUtils::copy_arry(arr1, len);
     int *arr5 = ArrayUtils::copy_arry(arr1, len);
     int *arr6 = ArrayUtils::copy_arry(arr1, len);
+    int *arr7 = ArrayUtils::copy_arry(arr1, len);
+
 
 
 
@@ -95,13 +98,12 @@ Java_com_smart_ndk_algorithm_Algorlthm_test035(JNIEnv *env, jclass type) {
 //    ArrayUtils::sort_arry("bubbleSort1", bubbleSort1, arr2, len);
 //    ArrayUtils::sort_arry("selectSort", selectSort, arr3, len);
 //    ArrayUtils::sort_arry("insertSort", insertSort, arr4, len);
-//    ArrayUtils::sort_arry("insertSort1", insertSort1, arr5, len);
-    ArrayUtils::sort_arry("shellInsertSort", shellInsertSort, arr6, len);
-    printArr(arr6, len);
-
-
-
 //    printArr(arr4, len);
+//    ArrayUtils::sort_arry("insertSort1", insertSort1, arr5, len);
+//    ArrayUtils::sort_arry("shellInsertSort", shellInsertSort, arr6, len);
+    ArrayUtils::sort_arry("mergeSort", mergeSort, arr7, len);
+
+//    printArr(arr7, len);
 
 
     delete[](arr1);

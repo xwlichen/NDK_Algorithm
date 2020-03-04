@@ -32,6 +32,29 @@ static void bubbleSort1(int arr[], int len) {
 
 }
 
+//因为开发过程中很少对int类型进行排序，所以需要使用模版进行封装
+template <class T>
+static void bubbleSortTemplate(T arr[], int len) {
+
+    //记录最后一次交换位置
+    int n = len;
+    int newn = 0;
+
+    do {
+        newn = 0;
+        for (int i = 1; i < n; ++i) {
+            if (arr[i - 1] > arr[i]) {
+                std::swap(arr[i - 1], arr[i]);  //一次交换3次赋值
+                newn = i;
+            }
+        }
+
+        n = newn;
+    } while (n > 0);
+
+
+}
+
 
 /**
  * 选择排序

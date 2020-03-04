@@ -37,11 +37,11 @@ namespace ArrayUtils {
         double cost_time = (double) (end_time - start_time) / CLOCKS_PER_SEC;
         LOGE("%s的耗时：%1f", sortName, cost_time);
 
-        //检测这个数组有没有排好序
-        for (int i = 0; i < len - 1; ++i) {
-            assert(arry[i] <= arry[i + 1]);
-
-        }
+//        //检测这个数组有没有排好序
+//        for (int i = 0; i < len - 1; ++i) {
+//            assert(arry[i] <= arry[i + 1]);
+//
+//        }
 
     }
 
